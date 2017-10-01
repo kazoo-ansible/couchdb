@@ -24,9 +24,9 @@ None
 Example Playbook
 ----------------
 
-- hosts: servers
-  roles:
-     - { role: kazoo-ansible, couch_user: user, couch_password: password }
+    - hosts: servers
+      roles:
+         - { role: kazoo-ansible, couch_user: user, couch_password: password }
 
 License
 -------
