@@ -59,6 +59,12 @@
     state: started
     daemon_reload: yes
     enabled: yes
+  register: couchdbstarted
+
+- name: Wait for CouchDB Start
+  pause:
+    seconds: 5
+  when: couchdbstarted.changed
 
 - name: Cluster CouchDB
   couchcluster:
