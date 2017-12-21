@@ -51,6 +51,8 @@
   template:
     src: files/10-filelog.ini
     dest: /opt/couchdb/etc/local.d/10-logfile.ini
+    owner: couchdb
+    group: couchdb
   notify: Restart CouchDB  
 
 - name: Start and Enable CouchDB
