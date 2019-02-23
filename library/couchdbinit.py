@@ -31,7 +31,7 @@ def main():
     
         create_dbs(current_node, couch_user, couch_password, missing_dbs)
     except Exception as ex:
-	module.fail_json(msg=str(ex))
+      module.fail_json(msg=str(ex))
     
     module.exit_json(changed=True)
 
